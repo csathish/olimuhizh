@@ -43,6 +43,7 @@ public class MainActivity extends Activity {
 			    	progress = progress1 * 1000;
 			    	seekBar.setProgress(progress);
 			        LoanVal.setText(String.valueOf(progress));
+			        updateEMI();
 			    }
 			    @Override
 			    public void onStartTrackingTouch(SeekBar seekBar) {
@@ -60,6 +61,7 @@ public class MainActivity extends Activity {
 			    @Override
 			    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 			        InterestVal.setText(String.valueOf(progress));
+			        updateEMI();
 			    }
 			    @Override
 			    public void onStartTrackingTouch(SeekBar seekBar) {
@@ -114,7 +116,7 @@ public class MainActivity extends Activity {
 		System.out.println(X + "is X");
 		float e = P * X /(X -1);
 		System.out.println(e + "is e");
-		emi.setText(String.valueOf(e));
+		emi.setText(String.valueOf((int)e));
 			
 		
 		}
